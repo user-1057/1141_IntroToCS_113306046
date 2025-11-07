@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    input, select, textarea {
+      margin: 5px 0;
+    }
+  </style>
+
+  <table>
+    <tr>
+      <th colspan="3" style="text-align:center;">About-113306046</th>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align:center;">
+        <img src="abc.jpg" alt="personal photo" width="120"><br>
+        personal photo
+      </td>
+      <td>
+        Name: <input type="text" name="name"><br>
+        Gender:
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="other">Other
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        County:
+        <select name="county">
+          <option>Taipei</option>
+          <option>Tainan</option>
+          <option>Taichung</option>
+          <option>Taoyuan</option>
+        </select>
+      </td>
+      <td>
+        Birthday: <input type="date" name="birthday">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        E-mail: <input type="email" name="email">
+      </td>
+      <td></td>
+    </tr>
+    </table>
+
+<table>
+    <tr>
+      <th>Hobby</th>
+      <td>
+        <input type="checkbox" name="hobby" value="swimming">Swimming
+        <input type="checkbox" name="hobby" value="volleyball">Volleyball
+        <input type="checkbox" name="hobby" value="movie">Movie
+        <input type="checkbox" name="hobby" value="game">Game
+        <input type="checkbox" name="hobby" value="sleep">sleep
+      </td>
+    </tr>
+    <tr>
+      <th>Skill</th>
+      <td>
+        <input type="checkbox" name="skill" value="java">Java
+        <input type="checkbox" name="skill" value="html">HTML
+        <input type="checkbox" name="skill" value="python">Python
+        <input type="checkbox" name="skill" value="office">Microsoft Office
+        <input type="checkbox" name="skill" value="premiere">Premiere
+      </td>
+    </tr>
+    <tr>
+      <th>Say something</th>
+      <td>
+        <textarea rows="4" cols="40" placeholder="Say something here."></textarea>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
