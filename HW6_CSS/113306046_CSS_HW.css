@@ -1,0 +1,127 @@
+body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.main-container {
+    width: 1000px;
+    background-color: white;
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.left-panel {
+    width: 30%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-panel img {
+    width: 100%;
+    border-bottom: 3px solid #ddd;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.text-content h2 {
+    margin-top: 15px;
+}
+
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.school-logo {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.right-panel {
+    width: 70%;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 22px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.year {
+    font-weight: bold;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: lightcyan;
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.hw-lab-container {
+    display: flex;
+    gap: 20px;
+}
+
+.hw-column, .lab-column {
+    width: 50%;
+    background-color: lightgreen;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hw-column a, .lab-column a {
+    text-decoration: none;
+    color: black;
+}
+
+.hw-column a:hover, .lab-column a:hover {
+    color:steelblue;
+}
+
+.music-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.music-item {
+    text-align: center;
+    width: 22%;
+    text-decoration: none;
+    color: black;
+}
+
+.music-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.music-note {
+    margin-top: 15px;
+    font-style: italic;
+}
