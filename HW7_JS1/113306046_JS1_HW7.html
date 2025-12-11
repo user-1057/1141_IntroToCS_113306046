@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>113306046_HW7_1A2B</title>
+</head>
+<body>
+
+<h1>113306046_HW7_1A2B</h1>
+
+<input id="guessInput" type="text" placeholder="請輸入4位不重複的數字">
+<button onclick="play()">確認</button>
+
+<div id="recordArea" style="margin-top:20px; font-size:18px;"></div>
+
+<script>
+function generateAnswer() {
+    let digits = ['0','1','2','3','4','5','6','7','8','9'];
+    let ans = "";
+
+    for (let i = 0; i < 4; i++) {
+        let index = Math.floor(Math.random() * digits.length);
+        ans += digits[index];
+        digits.splice(index, 1);
+    }
+
+    return ans;
+}
+
+let answer = generateAnswer();
+let count = 0;
+let finished = false;
+
+function isValid(str) {
+    if (str.length !== 4) return false;
+    if (!/^\d{4}$/.test(str)) return false;
+
+    let set = new Set(str.split(""));
+    return set.size === 4;
+}
+
+function checkAB(guess, ans) {
+    let A = 0, B = 0;
+
+    for (let i = 0; i < 4; i++) {
+        if (guess[i] === ans[i]) {
+            A++;
+        } else if (ans.includes(guess[i])) {
+            B++;
+        }
+    }
+
+    return `${A}A${B}B`;
+}
+
+function play() {
+    if (finished) return;
+
+    let inputField = document.getElementById("guessInput");
+    let guess = inputField.value.trim();
+
+    if (!isValid(guess)) {
+        alert("錯誤，請輸入4位不重複的數字");
+        return;
+    }
+
+    count++;
+    let result = checkAB(guess, answer);
+
+    let area = document.getElementById("recordArea");
+    area.innerHTML += `第 ${count} 次：${guess} → ${result}<br>`;
+
+    if (result === "4A0B") {
+        alert("恭喜你猜對了，總共猜了 " + count + " 次");
+        finished = true;
+    }
+
+    inputField.value = "";
+}
+</script>
+
+</body>
+</html>
