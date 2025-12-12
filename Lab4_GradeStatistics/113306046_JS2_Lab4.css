@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.input-box {
+    margin-right: 10px;
+    width: 120px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 6px 15px;
+    border: 1px solid #555;
+    background: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+table {
+    margin-top: 25px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+thead th {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+tfoot td {
+    background-color: white;
+    font-weight: bold;
+}
